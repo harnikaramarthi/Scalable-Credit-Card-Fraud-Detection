@@ -1,1 +1,56 @@
+Credit Card Fraud Detection — README
+Overview
 
+This project aims to detect fraudulent credit card transactions using machine learning. The dataset contains anonymized transaction details, and the goal is to classify each transaction as fraud or legitimate. Due to heavy class imbalance, the project focuses on proper preprocessing, sampling techniques, and evaluation metrics beyond accuracy.
+
+Dataset
+
+Source: Kaggle Credit Card Fraud Detection
+
+Rows: ~284,807 transactions
+
+Features: V1–V28 (PCA components), Amount, Time
+
+Target: Class (0 = normal, 1 = fraud)
+
+Key Steps
+1. Data Preprocessing
+
+Remove duplicates
+
+Scale numerical features (Amount, Time)
+
+Train-test split using Stratified sampling
+
+Handle imbalance: SMOTE, undersampling, or class-weight adjustments
+
+2. Modeling
+
+Models tried:
+
+Logistic Regression
+
+Random Forest
+
+XGBoost / LightGBM
+Best model chosen based on F1-score and Recall for the fraud class.
+
+3. Evaluation
+
+Important metrics:
+
+Precision, Recall, F1
+
+ROC AUC
+
+Precision–Recall AUC
+
+Confusion Matrix
+
+Results (Sample Expected Outcome)
+
+Recall (Fraud): 0.90+
+
+F1-Score (Fraud): 0.85+
+
+ROC AUC: 0.98+
